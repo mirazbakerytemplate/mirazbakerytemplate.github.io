@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Miraz Bakery</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<script type="text/javascript" src="jquery-1.11.2.min.js"></script>      <!-- jQuery -->
+      <script defer src="jquery.flexslider-min.js"></script><!-- FlexSlider -->
+      <script type="text/javascript" src="java.js" async></script>
+</head>
+<body>
+
+	 <div id="loader-wrapper">
+          <div id="loader"></div>
+          <div class="loader-section section-left"></div>
+          <div class="loader-section section-right"></div>
+        </div>
+	<header>
+	<nav>
+		<div class="logo">
+			<h4>Miraz Bakery</h4>
+		</div>
+		<ul class="nav-link">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="our foods.html">OurFoods</a></li>
+			<li><a href="#" onclick="scrollDown()">AboutUs</a></li>
+			<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+		</ul><div class="burger">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+</div>
+	</nav>
+	<script src="java.js"></script> 
+	</header>
+	<section class="top">
+		<div class="cake">
+			<img class="imgs" src="images/cake.jpg">
+			<div class ="moto">
+				<h2 style="font-size: 60px; color: #ffffff;">OUR FOODS</h2>
+				<p style="font-size: 40px; color: #ffffff;" >We provide excellent baked goods for that beauifult smile of yours.</p>
+			</div>
+		</div>
+	</section>
+	<section class="menu">
+		<div class="menu-block">
+			<h1 style="font-size: 50px;">OUR MENU</h1>
+			<div class="items">
+				<img src="images/cake.jpg" width="200" height="200"><p>Birthday Cake <br>Rs.200</p><button id="cart1">ADD TO CART</button>
+			</div>
+			<div class="items">
+				<img src="images/cake.jpg" width="200" height="200"><p>Birthday Cake <br>Rs.200</p><button id="cart2" >ADD TO CART</button>
+			</div>
+			<div class="items">
+				<img src="images/cake.jpg" width="200" height="200"><p>Birthday Cake <br>Rs.200</p><button id="cart3" >ADD TO CART</button>
+			</div>
+			<div class="items">
+				<img src="images/cake.jpg" width="200" height="200"><p>Birthday Cake <br>Rs.200</p><button id="cart4" >ADD TO CART</button>
+			</div><h1>pizza</h1>
+			<div class="items">
+				<img src="images/cake.jpg" width="200" height="200"><p>Birthday Cake <br>Rs.200</p><button id="cart5" >ADD TO CART</button>
+			</div>
+			<div class="items">
+				<img src="images/cake.jpg" width="200" height="200"><p>Birthday Cake <br>Rs.200</p><button id="cart6" >ADD TO CART</button>
+			</div>
+			<div class="items">
+				<img src="images/cake.jpg" width="200" height="200"><p>Birthday Cake <br>Rs.200</p><button id="cart7" >ADD TO CART</button>
+			</div>
+			<div class="items">
+				<img src="images/cake.jpg" width="200" height="200"><p>Birthday Cake <br>Rs.200</p><button id="cart8" >ADD TO CART</button>
+			</div>
+			</div>
+			<!--displayhide-->
+			 <script>
+document.getElementById("cart1").addEventListener("click",function(){
+	document.querySelector(".list-item1").style.display="table-row";
+	alert('Added To Cart');
+})
+document.getElementById("cart2").addEventListener("click",function(){
+	document.querySelector(".list-item2").style.display="table-row";
+	alert('Added To Cart');
+})
+document.getElementById("cart3").addEventListener("click",function(){
+	document.querySelector(".list-item3").style.display="table-row";
+	alert('Added To Cart');
+})
+document.getElementById("cart4").addEventListener("click",function(){
+	document.querySelector(".list-item4").style.display="table-row";
+	alert('Added To Cart');
+})
+document.getElementById("cart5").addEventListener("click",function(){
+	document.querySelector(".list-item5").style.display="table-row";
+	alert('Added To Cart');
+})
+document.getElementById("cart6").addEventListener("click",function(){
+	document.querySelector(".list-item6").style.display="table-row";
+	alert('Added To Cart');
+})
+
+document.getElementById("cart7").addEventListener("click",function(){
+	document.querySelector(".list-item7").style.display="table-row";
+	alert('Added To Cart');
+})
+document.getElementById("cart8").addEventListener("click",function(){
+	document.querySelector(".list-item8").style.display="table-row";
+	alert('Added To Cart');
+})
+</script>	
+
+	</section>
+	
+		
+	
+				
+
+<section>
+	<div class="small-cntainer cart-page">
+		<h2 align="center"
+		style="font-family: 'Josefin Sans', sans-serif; font-size: 50px;" >CART</h2>
+		<table>
+			<tr>
+				<th>
+					Product
+				</th>
+				<th>
+					Quantity
+				</th>
+				<th>Subtotal(Rs.)</th>
+			</tr>
+			<tr class="list-item1">
+				<td>
+					<div class="cart-info">
+						<img src="images/cake.jpg" width="80" height="80">
+						<div>
+							<p> Birthday1 cake</p>
+							<small>price: rs. 500.00</small><br>
+							<button id="remove1">Remove</button>
+													</div>
+					</div>
+				</td>
+				<td>  <!--valueispriceoftheitem--><input type="number" min="1" id="qty1" onchange="multiply1()"></td>
+				<td><input type="number" id="prc1" value="0" min="200" max="200" readonly="0" name="gider" style="width: 35%; float: right; "> </td>
+			</tr>
+			<tr class="list-item2">
+				<td>
+					<div class="cart-info">
+						<img src="images/cake.jpg" width="80" height="80">
+						<div>
+							<p> Birthday cake</p>
+							<small>price: rs. 600.00</small><br>
+							<button id="remove2">Remove</button>
+													</div>
+					</div>
+				</td>
+				<td>  <!--valueispriceoftheitem--><input type="number" min="1" id="qty2" onchange="multiply2()"></td>
+				<td><input type="number" id="prc2" value="0" min="200" max="200" readonly="0" name="gider" style="width: 35%; float: right; "> </td>
+			</tr>
+			<tr class="list-item3">
+				<td>
+					<div class="cart-info">
+						<img src="images/cake.jpg" width="80" height="80">
+						<div>
+							<p> Birthday cake</p>
+							<small>price: rs. 100.00</small><br>
+							<button id="remove3">Remove</button>
+													</div>
+					</div>
+				</td>
+			<td>  <!--valueispriceoftheitem--><input type="number" min="1" id="qty3" onchange="multiply3()"></td>
+				<td><input type="number" id="prc3" value="0" min="200" max="200"readonly="0" name="gider" style="width: 35%; float: right; "> </td>
+			</tr>
+			<tr class="list-item4">
+				<td>
+					<div class="cart-info">
+						<img src="images/cake.jpg" width="80" height="80">
+						<div>
+							<p> Birthday cake</p>
+							<small>price: rs. 200.00</small><br>
+							<button id="remove4">Remove</button>>
+													</div>
+					</div>
+				</td>
+				<td>  <!--valueispriceoftheitem--><input type="number" min="1" id="qty4" onchange="multiply4()"></td>
+				<td><input type="number" id="prc4" value="0" min="200" max="200" readonly="0" name="gider" style="width: 35%; float: right; "> </td>
+			</tr>
+			<tr class="list-item5">
+				<td>
+					<div class="cart-info">
+						<img src="images/cake.jpg" width="80" height="80">
+						<div>
+							<p> Birthday cake</p>
+							<small>price: rs. 200.00</small><br>
+							<button id="remove5">Remove</button>
+													</div>
+					</div>
+				</td>
+				<td>  <!--valueispriceoftheitem--><input type="number" min="1" id="qty5" onchange="multiply5()"></td>
+				<td><input type="number" id="prc5" value="0" min="200" max="200" readonly="0" name="gider" style="width: 35%; float: right; "> </td>
+			</tr>
+			<tr class="list-item6">
+				<td>
+					<div class="cart-info">
+						<img src="images/cake.jpg" width="80" height="80">
+						<div>
+							<p> Birthday cake</p>
+							<small>price: rs. 200.00</small><br>
+							<button id="remove6">Remove</button>
+													</div>
+					</div>
+				</td>
+				<td>  <!--valueispriceoftheitem--><input type="number" min="1" id="qty6" onchange="multiply6()"></td>
+				<td><input type="number" id="prc6" value="0" min="200" max="200" readonly="0" name="gider" style="width: 35%; float: right; "> </td>
+			</tr>
+			<tr class="list-item7">
+				<td>
+					<div class="cart-info">
+						<img src="images/cake.jpg" width="80" height="80">
+						<div>
+							<p> Birthday cake</p>
+							<small>price: rs. 300.00</small><br>
+							<button id="remove7">Remove</button>
+													</div>
+					</div>
+				</td>
+				<td>  <!--valueispriceoftheitem--><input type="number" min="1" id="qty7" onchange="multiply7()"></td>
+				<td><input type="number" id="prc7" value="0" min="200" max="200" readonly="0" name="gider" style="width: 35%; float: right; "> </td>
+			</tr>
+			<tr class="list-item8">
+				<td>
+					<div class="cart-info">
+						<img src="images/cake.jpg"  width="80" height="80">
+						<div>
+							<p> Birthday cake</p>
+							<small>price: rs. 200.00</small><br>
+							<button id="remove8">Remove</button>
+													</div>
+					</div>
+				</td>
+				<td>  <!--valueispriceoftheitem--><input type="number" min="1" id="qty8" onchange="multiply8()"></td>
+				<td><input type="number" id="prc8" value="0" min="200" max="200" readonly="0" name="gider" style="width: 35%; float: right; "> </td>
+			</tr>
+		</table>
+		<!--multipy-->
+		<script>
+			
+
+		</script>
+		<div class="total-price">
+			<table>
+				<tr><td>Sub-Total(Rs.)</td><td><input type="number" value="0.00" id="subt" name="subt" style="width: 80%;"></td></tr>
+				<tr><td>Delivery charge(Rs.)</td><td><input type="number" value="50" readonly="50" id="sub" name="sub" style="width: 80%;"></td></tr>
+				<tr><td>Total(Rs.)</td><td><input type="number" value="0.00" id="subt" name="subt1" style="width: 80%;"></td></tr>
+			</table>
+		</div>
+		<button class="button-in" id="button-in">PURCHASE</button>
+
+	</div>
+	<div class="popup">
+		<div class="popup-content"><button id="cancle" style="float: right;">X</button>
+			<input type="text" placeholder="NAME" style="display: block; margin-left: 100px; font-size: 1.5em; margin-top: 100px; "><br>
+			<input type="text" placeholder="ADDRESS" style="display: block; margin-left: 100px; font-size: 1.5em; "><br>
+			<input type="number" placeholder="CONTACT NUMBER" style="display: block; margin-left: 100px; font-size: 1.5em; "><br>
+			<button class="button-in" id="purchase">PURCHASE</button>
+
+		</div>
+	</div>
+	<!--viewpopup-->
+	<script>
+		document.getElementById("button-in").addEventListener("click",function(){
+			document.querySelector(".popup").style.display="flex";
+		})
+
+		document.getElementById("cancle").addEventListener("click",function(){
+			document.querySelector(".popup").style.display="none";
+		})
+
+		document.getElementById("purchase").addEventListener("click",function(){
+			document.querySelector(".popup").style.display="none";
+			alert('PURCHASED ITEMS')
+		})
+
+	</script>
+
+	<!--remove-->
+	<script>
+document.getElementById("remove1").addEventListener("click",function(){
+	document.querySelector(".list-item1").style.display="none";
+	document.getElementById('prc1').value="0";
+})
+document.getElementById("remove2").addEventListener("click",function(){
+	document.querySelector(".list-item2").style.display="none";
+	document.getElementById('prc2').value="0";
+})
+document.getElementById("remove3").addEventListener("click",function(){
+	document.querySelector(".list-item3").style.display="none";
+	document.getElementById('prc3').value="0";
+})
+document.getElementById("remove4").addEventListener("click",function(){
+	document.querySelector(".list-item4").style.display="none";
+	document.getElementById('prc4').value="0";
+})
+document.getElementById("remove5").addEventListener("click",function(){
+	document.querySelector(".list-item5").style.display="none";
+	document.getElementById('prc5').value="0";
+})
+document.getElementById("remove6").addEventListener("click",function(){
+	document.querySelector(".list-item6").style.display="none";
+	document.getElementById('prc6').value="0";
+})
+document.getElementById("remove7").addEventListener("click",function(){
+	document.querySelector(".list-item7").style.display="none";
+	document.getElementById('prc7').value="0";
+})
+document.getElementById("remove8").addEventListener("click",function(){
+	document.querySelector(".list-item8").style.display="none";
+	document.getElementById('prc8').value="0";
+})
+</script>
+</section>
+	<section class="AboutUs">
+	<div class="info">
+		<h2>About us</h2>
+		<p class="para"> (a short paragraph describing the bakery and the service it provides.)</p>
+		<p class="para">(explanation)</p>
+	</div>
+	<div class="contact">
+		<h3>contact us</h3>
+		<p class="para">address:(bakery location)</p><p class="para">contact number:</p><p class="para">e-mail:</p>
+	</div>
+	<div class="logo1"><img class="miraz" src="images/logos.jpg"></div>
+</section>
+</body>
+</html>
